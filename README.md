@@ -20,4 +20,4 @@ and has no purpose? I dont sanatize any of the SQL lol.
 ![image](https://user-images.githubusercontent.com/65798268/159150788-8f30d21b-a3bb-40ae-bcd7-daaa9040d0dc.png)
 
 Find the site hosted here.
-http://www.justicedev.xyz
+http://justicedev.xyz/
