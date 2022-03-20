@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block
+    content %}
+    <br>
+    <h1 align="center">Insult Generator</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'display' %}
+        <div class="jumbotron">
+          <p>Your insult has been generated!</p>
+          <br>
+          <p>Insult Returned: {{insult}}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+      <div class="form-group">
+        <label for="insult">Insult Type</label>
+        <p style="color: white;">- Regular</P>
+          <p style="color: white;">- Adjective</p>
+        <input
+        type="insult"
+        class="form-control"
+        id="insult"
+        name="insult"
+        placeholder="Enter a type of insult! Listed Above ^"
+      />
+      </div>
+      <button type="submit" class="btn btn-dark">Generate Insult</button>
+    </form>
+    {% endblock %}
+    

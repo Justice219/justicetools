@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Notes{% endblock %}
+
+{% block content %}
+<br>
+<h1 align="center">Home Page</h1>
+<br>
+<div class="jumbotron">
+    <h1 class="display-4">Welcome: {{ user.username }}</h1>
+    <br>
+    <hr class="my-4">
+    <p>This site still has no purpose tbh. Right now its just a few thigs ive made with flask! </p>
+    <p>Im still trying to make an image uploader and whatever aswell </p>
+  </div>
+  <div class="jumbotron">
+    <p class="lead">User Data</p>
+    <p>Username: {{user.username}}</p>
+    <p>Number of notes: {{count}}</p>
+    <p></p>
+    <br>
+  </div>
+{% endblock %}

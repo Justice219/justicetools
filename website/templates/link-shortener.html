@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block
+    content %}
+    <br>
+    <h1 align="center">Insult Generator</h1>
+    <br>
+
+    <div class="jumbotron">
+      <p>Link Statistics</p>
+      <ul class="list-group list-group-flush" id="notes">
+        {% for note in user.notes %}
+            <li class="list-group-item">
+                <h6>Note Title - {{ note.title }}</h6>
+                <h6>Note Date - {{ note.date }}</h6>
+                {{ note.data }}
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <form method="POST">
+      <div class="form-group">
+        <label for="link">Link URL</label>
+        <input
+        type="link"
+        class="form-control"
+        id="link"
+        name="link"
+        placeholder="Insert a link to shorten!"
+      />
+      </div>
+      <button type="submit" class="btn btn-dark">Shorten Link!</button>
+    </form>
+    {% endblock %}
+    
